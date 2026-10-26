@@ -1,6 +1,6 @@
 setup:
-	@echo "TODO: add setup:
-	
+	@echo "TODO: add setup"
+
 test:
 	@echo "TODO: add tests"
 
