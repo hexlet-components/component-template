@@ -14,9 +14,11 @@
 ## Запуск
 
 ```sh
-make setup
-make test
+mise run setup
+mise run test
 ```
+
+`make <задача>` вызывает ту же задачу mise.
 
 ## Проверки
 

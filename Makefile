@@ -1,10 +1,7 @@
-# Цели заполняет первая настройка (AGENTS.md). До неё заглушки падают, чтобы CI
-# не выдавал ненастроенный репозиторий за проверенный.
-setup:
-	@echo "setup не настроен, см. AGENTS.md"; exit 1
+# Тонкий прокси: make <задача> запускает mise run <задача>. Задачи живут в mise.toml.
+%: FORCE
+	@mise run $@
 
-test:
-	@echo "test не настроен, см. AGENTS.md"; exit 1
-
-lint:
-	@echo "lint не настроен, см. AGENTS.md"; exit 1
+# Без этого правила make пытается собрать сам Makefile через прокси.
+Makefile: ;
+FORCE: ;
